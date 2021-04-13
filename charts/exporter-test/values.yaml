@@ -82,8 +82,8 @@ service:
 
 servicemonitor:
   enabled: false
-  namespace: prometheus
-  release:
+  namespace:
+  release: kps
 
 
 ingress:
