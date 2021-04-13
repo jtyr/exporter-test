@@ -16,7 +16,7 @@ app:
   listen: 0.0.0.0:80
 
 env:
-  BACKEND_LISTEN: "{{ .Values.app.listen }}"
+  SERVER_LISTEN: "{{ .Values.app.listen }}"
 
 nameOverride: ""
 fullnameOverride: ""
