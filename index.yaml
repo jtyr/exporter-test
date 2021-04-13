@@ -3,6 +3,16 @@ entries:
   exporter-test:
   - apiVersion: v2
     appVersion: 0.1.1
+    created: "2021-04-13T21:02:37.540431001Z"
+    description: A Helm chart for the Exporter Test application.
+    digest: 64a3e718b3e8815c99c35f249ca216b8e7c4fd2e38b84766eb5e211b5e070484
+    name: exporter-test
+    type: application
+    urls:
+    - https://github.com/jtyr/exporter-test/releases/download/exporter-test-0.1.5/exporter-test-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 0.1.1
     created: "2021-04-13T20:57:23.646268641Z"
     description: A Helm chart for the Exporter Test application.
     digest: e52db20b89eedfaffe17f123f348618e5548ecc39fa20316180913359d44c52a
