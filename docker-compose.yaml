@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  exportertest:
+    image: jtyr/exporter-test:0.1.0
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      SERVER_LISTEN: 0.0.0.0:80
+    ports:
+      - "8080:80"
+    networks:
+      - exportertest
+
+networks:
+  exportertest:

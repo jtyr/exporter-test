@@ -14,4 +14,4 @@ COPY --from=builder /exporter-test /
 
 EXPOSE 8080
 
-ENTRYPOINT ["/extporter-test"]
+ENTRYPOINT ["/exporter-test"]

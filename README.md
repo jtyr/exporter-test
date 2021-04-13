@@ -8,6 +8,24 @@ Telemetry](https://opentelemetry.io/) (OTEL) instrumentation for the metrics.
 Usage
 -----
 
+
+### Docker Compose
+
+Run the container:
+
+```shell
+docker-compose up
+```
+
+Test the `metrics` endpoint:
+
+```shell
+curl http://localhost:8080/metrics
+```
+
+
+### Kubernetes
+
 Add Helm chart repo:
 
 ```shell
