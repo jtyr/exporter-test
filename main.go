@@ -97,12 +97,16 @@ func (e *myExporter) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func MyServeHTTP(w http.ResponseWriter, r *http.Request) {
 	level.Info(logger).Log(
-		"msg", "root...")
+		"msg", "Hello from the root endpoint")
 
 	ctx := r.Context()
 	reqCounter.Add(ctx, float64(1), commonLabels...)
 
 	fmt.Fprintf(w, "Hello world\n")
+}
+
+func healtcheckHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "ok\n")
 }
 
 func main() {
@@ -129,6 +133,7 @@ func main() {
 
 	http.Handle("/", rootHandler)
 	http.Handle("/metrics", metricsHandler)
+	http.HandleFunc("/healthcheck", healtcheckHandler)
 
 	err := http.ListenAndServe(listen, nil)
 	if err != nil {

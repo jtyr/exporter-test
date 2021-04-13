@@ -42,14 +42,14 @@ securityContext: {}
 
 readinessProbe:
   httpGet:
-    path: /
+    path: /healthcheck
     port: *container_port
   initialDelaySeconds: 5
   periodSeconds: 10
 
 livenessProbe:
   httpGet:
-    path: /
+    path: /healthcheck
     port: *container_port
   initialDelaySeconds: 15
   periodSeconds: 20
@@ -81,9 +81,9 @@ service:
 
 
 servicemonitor:
-  enabled: true
+  enabled: false
   namespace: prometheus
-  release: kps
+  release:
 
 
 ingress:

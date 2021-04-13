@@ -5,7 +5,7 @@ metadata:
   labels:
     release: {{ .Values.servicemonitor.release }}
   name: {{ include "this.fullname" . }}
-  namespace: {{ .Values.servicemonitor.namespace }}
+  namespace: {{ .Values.servicemonitor.namespace | default .Release.Namespace }}
 spec:
   endpoints:
     - path: /
