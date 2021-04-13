@@ -1,3 +1,7 @@
+[![Actions status](https://github.com/jtyr/exporter-test/actions/workflows/on-push-master-publish-chart.yml/badge.svg)](https://github.com/jtyr/exporter-test/actions/workflows/on-push-master-publish-chart.yml)
+[![Docker build](https://img.shields.io/docker/cloud/build/jtyr/exporter-test?label=Docker%20build&logo=docker)](https://hub.docker.com/repository/docker/jtyr/exporter-test)
+
+
 Exporter Test
 =============
 
