@@ -30,12 +30,13 @@ Add Helm chart repo:
 
 ```shell
 helm repo add exporter-test https://jtyr.github.io/exporter-test
+helm repo update
 ```
 
 Install Helm chart:
 
 ```shell
-helm upgrade --create-namespace --namespace exporter-test --install exporter-test/exporter-test
+helm upgrade --create-namespace --namespace exporter-test --install exporter-test exporter-test/exporter-test
 ```
 
 Test the `metrics` endpoint:
